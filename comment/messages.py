@@ -81,10 +81,10 @@ class EmailInfo:
 
 
 class FlagState:
-    UNFLAGGED = _('Unflagged')
-    FLAGGED = _('Flagged')
-    REJECTED = _('Flag rejected by the moderator')
-    RESOLVED = _('Comment modified by the author')
+    UNFLAGGED = _('Não sinalizado')
+    FLAGGED = _('Sinalizado')
+    REJECTED = _('Sinalização rejeitada pelo moderador')
+    RESOLVED = _('Comentário modificado pelo autor')
 
 
 class FollowError:
@@ -93,10 +93,10 @@ class FollowError:
 
 
 class BlockState:
-    UNBLOCKED = _('Unblocked')
-    BLOCKED = _('Blocked')
+    UNBLOCKED = _('Desbloqueado')
+    BLOCKED = _('Bloqueado')
 
 
 class BlockUserError:
     NOT_PERMITTED = _(settings.COMMENT_RESPONSE_FOR_BLOCKED_USER)
-    INVALID = _('Invalid input data')
+    INVALID = _('Dados de entrada inválidos')
