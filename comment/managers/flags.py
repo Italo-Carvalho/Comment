@@ -20,7 +20,7 @@ class FlagManager(models.Manager):
 class FlagInstanceManager(models.Manager):
 
     REASONS = getattr(settings, 'COMMENT_FLAG_REASONS')
-    REASONS.append((100, _('Something else')))
+    REASONS.append((100, _('Algo mais')))
 
     Reason = namedtuple('Reason', ['value', 'reason'])
     reasons_list = []
