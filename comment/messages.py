@@ -62,12 +62,12 @@ class EmailError:
 
 
 class FlagInfo:
-    FLAGGED_SUCCESS = _('Comment flagged')
-    UNFLAGGED_SUCCESS = _('Comment flag removed')
+    FLAGGED_SUCCESS = _('Comentário sinalizado')
+    UNFLAGGED_SUCCESS = _('Sinalizador de comentário removido')
 
 
 class ReactionInfo:
-    UPDATED_SUCCESS = _('Your reaction has been updated successfully')
+    UPDATED_SUCCESS = _('Sua reação foi atualizada com sucesso')
 
 
 class EmailInfo:
