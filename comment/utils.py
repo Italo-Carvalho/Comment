@@ -182,3 +182,4 @@ def get_wrapped_words_number():
         raise ImproperlyConfigured(ErrorMessage.WRAP_CONTENT_WORDS_NOT_INT)
 
     return words_number
+ 
