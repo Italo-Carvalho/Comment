@@ -52,10 +52,11 @@ def get_img_path(obj):
     """ returns url of profile image of a user """
     profile = get_profile_instance(obj.user)
     if not profile:
-        return get_gravatar_img(obj.email)
+        return obj.user.vendor.avatar.url
     for field in profile.__class__._meta.get_fields():
         if hasattr(field, 'upload_to'):
             return field.value_from_object(profile).url
+
     return get_gravatar_img(obj.email)
 
 
@@ -124,8 +125,12 @@ register.inclusion_tag('comment/comments/content.html')(render_content)
 
 
 @register.simple_tag(name='can_delete_comment')
-def can_delete_comment(comment, user):
-    return is_comment_admin(user) or (comment.is_flagged and is_comment_moderator(user))
+def can_delete_comment(comment, user, obj):
+
+    if hasattr(user, "vendor"):
+        if user.vendor == obj.vendor:
+            return True
+    return is_comment_admin(user)
 
 
 @register.filter(name='can_block_users')
