@@ -218,10 +218,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 let replyNum = Number(replyNumberElement.innerText) + 1;
                 replyNumberElement.textContent = replyNum.toString();
                 if (replyNum > 1) {
-                    reply.textContent = gettext("Replies");
+                    reply.textContent = gettext("Responder");
                 } else {
-                    reply.textContent = gettext("Reply");
-                }
+                    reply.textContent = gettext("Resposta do vendedor");
+                } 
                 commentCount(1);
                 // update followBtn
                 let followButton = form.parentElement.previousElementSibling.querySelector(".js-comment-follow");
